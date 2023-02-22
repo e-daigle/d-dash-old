@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+:root {
+  --ddash-color-primary: #422afb;
+  --ddash-color-secondary: #422afb;
+  --ddash-color-container-background: #f4f7fe;
+  --ddash-color-nav-border: rgba(135, 140, 189, 0.2);
+  --ddash-color-nav-background: #ffffff;
+  --ddash-color-card-icon: #422afb;
+  --ddash-color-light-text: #8f9bba;
+  --ddash-color-dark-text: #8f9bba;
+  --ddash-fontWeight-thin: 200;
+  --ddash-fontWeight-light: 300;
+  --ddash-fontWeight-normal: 400;
+  --ddash-fontWeight-medium: 500;
+  --ddash-fontWeight-semibold: 600;
+  --ddash-fontSize-1x: 1em;
+  --ddash-fontSize-2x: 1.5em;
+}
+
+body {
+  margin: 0;
+}

@@ -1,0 +1,36 @@
+{
+  "name": "@emile-daigle/d-dash",
+  "version": "0.1.6",
+  "description": "Next.js specific dashboard component library",
+  "author": "Emile Daigle",
+  "license": "ISC",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emile-daigle/d-dash.git"
+  },
+  "devDependencies": {
+    "@types/node": "18.14.0",
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
+    "next": "13.1.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "4.9.5"
+  },
+  "keywords": [
+    "components",
+    "library",
+    "next.js",
+    "react",
+    "dashboard"
+  ],
+  "files": [
+    "dist"
+  ]
+}
