@@ -1,38 +1,94 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Lightweight TypeScript Next.js dashboard component library
 
-## Getting Started
+This library is Next.js specific and uses CSS modules for styling. The components are meant to be simple and customizable.
 
-First, run the development server:
+**This library needs to be transpiled by your Next.js app in order to work**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+&nbsp;
+
+## Usage
+
+1. [Prerequisites](#prerequisites)
+1. [Install](#install)
+1. [Themes](#themes)
+1. [Container](#container)
+1. [Navigation](#navigation)
+
+## Prerequisites
+
+This package can only be used in a `next >= 6.0` `typescript` project with it's usual dependencies.
+
+## Install
+
+```
+npm i @emile-daigle/d-dash
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**You will also need to modify Next's configuration file**
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Next.js >= 13.1.0
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+All features of `next-transpile-modules` are now natively built-in Next.js 13.1. You can use Next's transpilePackages option.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Add `@emile-daigle/d-dash` to the `transpilePackages` option inside of the `next.config.js` file. This will tell Next to automatically transpile and bundle the package.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```
+//next.config.js
 
-## Learn More
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  transpilePackages: ["@emile-daigle/d-dash"]
+}
 
-To learn more about Next.js, take a look at the following resources:
+module.exports = nextConfig
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Next.js < 13.1.0
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+You will need to install [`next-transpile-modules`](https://www.npmjs.com/package/next-transpile-modules)
 
-## Deploy on Vercel
+```
+npm i next-transpile-modules
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Add the `next-transpile-modules` plugin to your `next.config.js` file with `@emile-daigle/d-dash` as part of the transpiled modules.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+//next.config.js
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+}
+
+const withTM = require("next-transpile-modules")([
+"@emile-daigle/d-dash"
+])
+
+module.exports = withTM(nextConfig)
+```
+
+## Themes
+
+A theme is needed for the components to work. They use global CSS variables for multiple properties like color, font-weight and font-size.
+
+Themes are provided inside of the `themes` folder. You need to [import a theme globaly in your app](https://nextjs.org/docs/basic-features/built-in-css-support#adding-a-global-stylesheet).
+
+```
+//_app.tsx
+
+import "@emile-daigle/d-dash/themes/default.css"
+
+//normal _app.tsx code
+```
+
+### Create your own theme
+
+You can create your own theme to customize your dashboard. Every CSS variables that the provided themes contain need to be declared inside your theme to avoid problems.
+
+It is recommended to copy the contents of the default.css file, create your own css file and only change the needed variables like `--ddash-color-primary` or `--ddash-color-secondary`.
+
+You could also copy your theme inside of the `global.css` file if you use it.
+
+**Remember that whatever theme option you use, it needs to be imported inside of your app**
