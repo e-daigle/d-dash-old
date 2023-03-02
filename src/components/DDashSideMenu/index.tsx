@@ -5,14 +5,14 @@ import { ImageProps, NavLink } from "../../../types";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
-import styles from "./ddash-left-menu.module.css";
+import styles from "./ddash-side-menu.module.css";
 
 type Props = {
   image?: ImageProps;
   links: NavLink[];
 };
 
-const LeftNav = ({ image, links }: Props) => {
+const DDashSideMenu = ({ image, links }: Props) => {
   const router = useRouter();
   const [click, setClick] = useState(false);
 
@@ -52,4 +52,4 @@ const LeftNav = ({ image, links }: Props) => {
   );
 };
 
-export default LeftNav;
+export default DDashSideMenu;

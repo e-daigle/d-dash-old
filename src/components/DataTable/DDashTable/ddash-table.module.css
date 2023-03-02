@@ -1,0 +1,30 @@
+.container {
+  width: 100%;
+}
+
+.head {
+  padding: 10px 0.7em 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.head button {
+  color: var(--ddash-color-primary);
+  padding: 10px 20px;
+  background-color: var(--ddash-color-main-background);
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: var(--ddash-fontWeight-medium);
+}
+
+.head h2 {
+  font-size: var(--ddash-fontSize-25x);
+  color: var(--ddash-color-dark-text);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}

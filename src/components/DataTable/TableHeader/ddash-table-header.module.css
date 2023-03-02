@@ -1,0 +1,13 @@
+.container {
+  border-bottom: var(--ddash-border-light);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.container th {
+  text-align: left;
+  color: var(--ddash-color-light-text);
+  font-size: var(--ddash-fontSize-10x);
+  letter-spacing: var(--ddash-letterSpacing-wide);
+  padding: 0.75em;
+}
+

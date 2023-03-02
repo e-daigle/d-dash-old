@@ -1,0 +1,68 @@
+.container {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  max-width: 80px;
+}
+
+.image > * {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.icon {
+  background-color: var(--ddash-color-main-background);
+  padding: 10px;
+  border-radius: 50%;
+  max-width: 80px;
+}
+
+.icon > * {
+  height: 35px;
+  width: 35px;
+  fill: var(--ddash-color-card-icon);
+}
+
+.text h3 {
+  color: var(--ddash-color-light-text);
+  font-size: var(--ddash-fontSize-11x);
+  font-weight: var(--ddash-fontWeight-medium);
+  line-height: 100%;
+}
+.text .data {
+  margin-top: 1px;
+  color: var(--ddash-color-dark-text);
+  font-weight: var(--ddash-fontWeight-bold);
+  font-size: var(--ddash-fontSize-20x);
+}
+
+.text .comment{
+  line-height: 100%;
+}
+
+.text .comment span{
+  color: var(--ddash-color-light-text);
+  font-size: var(--ddash-fontSize-05x);
+}
+
+.text .comment .normal{
+  font-weight: var(--ddash-fontWeight-medium);
+}
+
+.text .comment .semibold{
+  font-weight: var(--ddash-fontWeight-semibold);
+}
+
+.text .comment .bold{
+  font-weight: var(--ddash-fontWeight-bold);
+}
+
+

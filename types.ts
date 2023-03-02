@@ -18,6 +18,16 @@ export type ImageProps = {
 };
 
 export type NavLink = {
-    link: string;
-    displayName: string;
-}
+  link: string;
+  displayName: string;
+};
+
+export type Column = {
+  field: string;
+  title: string;
+};
+
+export type RowAction = {
+  name: string;
+  onClick: (idx: number) => void;
+};

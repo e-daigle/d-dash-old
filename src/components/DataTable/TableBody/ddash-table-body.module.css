@@ -1,0 +1,4 @@
+.container td:not(:last-child) {
+  padding: 0.75em;
+}
+
