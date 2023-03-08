@@ -1,0 +1,142 @@
+[
+  {
+    "id": 0,
+    "name": "Odessa",
+    "lastname": "Schmidt",
+    "age": 22,
+    "eyeColor": "blue"
+  },
+  {
+    "id": 1,
+    "name": "Mccoy",
+    "lastname": "Farrell",
+    "age": 21,
+    "eyeColor": "brown"
+  },
+  {
+    "id": 2,
+    "name": "Robyn",
+    "lastname": "Horne",
+    "age": 21,
+    "eyeColor": "green"
+  },
+  {
+    "id": 3,
+    "name": "Rush",
+    "lastname": "Pittman",
+    "age": 37,
+    "eyeColor": "blue"
+  },
+  {
+    "id": 4,
+    "name": "Forbes",
+    "lastname": "Collier",
+    "age": 25,
+    "eyeColor": "brown"
+  },
+  {
+    "id": 5,
+    "name": "Young",
+    "lastname": "Daniel",
+    "age": 31,
+    "eyeColor": "blue"
+  },
+  {
+    "id": 6,
+    "name": "Blanchard",
+    "lastname": "Anthony",
+    "age": 32,
+    "eyeColor": "brown"
+  },
+  {
+    "id": 7,
+    "name": "Abby",
+    "lastname": "Crane",
+    "age": 39,
+    "eyeColor": "green"
+  },
+  {
+    "id": 8,
+    "name": "Rasmussen",
+    "lastname": "Fry",
+    "age": 38,
+    "eyeColor": "green"
+  },
+  {
+    "id": 9,
+    "name": "Cote",
+    "lastname": "Ortiz",
+    "age": 22,
+    "eyeColor": "brown"
+  },
+  {
+    "id": 10,
+    "name": "Middleton",
+    "lastname": "Kidd",
+    "age": 39,
+    "eyeColor": "blue"
+  },
+  {
+    "id": 11,
+    "name": "Darlene",
+    "lastname": "Lott",
+    "age": 25,
+    "eyeColor": "blue"
+  },
+  {
+    "id": 12,
+    "name": "Lindsey",
+    "lastname": "Richards",
+    "age": 39,
+    "eyeColor": "blue"
+  },
+  {
+    "id": 13,
+    "name": "Rodriguez",
+    "lastname": "Oneal",
+    "age": 38,
+    "eyeColor": "brown"
+  },
+  {
+    "id": 14,
+    "name": "Hobbs",
+    "lastname": "Mcclain",
+    "age": 22,
+    "eyeColor": "blue"
+  },
+  {
+    "id": 15,
+    "name": "Mayer",
+    "lastname": "Hubbard",
+    "age": 31,
+    "eyeColor": "green"
+  },
+  {
+    "id": 16,
+    "name": "Jackie",
+    "lastname": "Snow",
+    "age": 27,
+    "eyeColor": "blue"
+  },
+  {
+    "id": 17,
+    "name": "Morin",
+    "lastname": "Vang",
+    "age": 27,
+    "eyeColor": "green"
+  },
+  {
+    "id": 18,
+    "name": "Lisa",
+    "lastname": "Perez",
+    "age": 23,
+    "eyeColor": "brown"
+  },
+  {
+    "id": 19,
+    "name": "Dina",
+    "lastname": "Dunlap",
+    "age": 38,
+    "eyeColor": "brown"
+  }
+]

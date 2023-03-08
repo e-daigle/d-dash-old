@@ -11,7 +11,7 @@
   box-sizing: border-box;
 }
 
-.container {
+.content {
   display: flex;
   position: relative;
   font-family: "DM Sans", "Roboto", sans-serif;
@@ -20,14 +20,14 @@
   background-color: var(--ddash-color-main-background);
 }
 
-.container.left {
+.content.left {
   flex-direction: row;
 }
-.container.right {
+.content.right {
   flex-direction: row-reverse;
 }
 
-.container.top {
+.content.top {
   flex-direction: column;
 }
 

@@ -9,7 +9,7 @@ type Props = {
   sort: (field: string) => void;
 };
 
-const TableHeader = ({ columns, order, orderBy, sort }: Props) => {
+const DDashTableHeader = ({ columns, order, orderBy, sort }: Props) => {
   const columnWidth = 100 / columns.length;
   return (
     <thead className={styles.container}>
@@ -34,4 +34,4 @@ const TableHeader = ({ columns, order, orderBy, sort }: Props) => {
   );
 };
 
-export default TableHeader;
+export default DDashTableHeader;

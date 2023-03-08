@@ -20,7 +20,7 @@ type Props = {
   comment?: Comment | Comment[];
 };
 
-const SmallCard = ({ title, value, image, comment }: Props) => {
+const DDashSmallCard = ({ title, value, image, comment }: Props) => {
   return (
     <div className={styles.container}>
       {image ? (
@@ -58,4 +58,4 @@ const SmallCard = ({ title, value, image, comment }: Props) => {
   );
 };
 
-export default SmallCard;
+export default DDashSmallCard;

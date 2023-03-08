@@ -5,7 +5,7 @@ type Props = {
   children: React.ReactElement[];
 };
 
-const SmallSection = ({ children }: Props) => {
+const DDashSmallSection = ({ children }: Props) => {
   return (
     <div className={styles.container}>
       {children.map((child, idx) => (
@@ -15,4 +15,4 @@ const SmallSection = ({ children }: Props) => {
   );
 };
 
-export default SmallSection;
+export default DDashSmallSection;

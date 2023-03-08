@@ -10,14 +10,15 @@
   border-radius: 20px;
   background-color: white;
   overflow-wrap: break-word;
+  overflow-x: auto;
   padding: 15px 20px;
 }
 
 .soloContainer {
-  max-height: 24rem;
   border-radius: 20px;
   background-color: white;
   overflow-wrap: break-word;
+  overflow-x: auto;
   padding: 15px 20px;
 }
 

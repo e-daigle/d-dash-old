@@ -5,7 +5,7 @@ type Props = {
   children: React.ReactElement | React.ReactElement[];
 };
 
-const LargeSection = ({ children }: Props) => {
+const DDashLargeSection = ({ children }: Props) => {
   const isArray = Array.isArray(children);
   if (isArray) {
     return (
@@ -21,4 +21,4 @@ const LargeSection = ({ children }: Props) => {
   return <div className={styles.soloContainer}>{children}</div>;
 };
 
-export default LargeSection;
+export default DDashLargeSection;

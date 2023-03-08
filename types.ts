@@ -27,7 +27,29 @@ export type Column = {
   title: string;
 };
 
-export type RowAction = {
+//Text inside of the Dialog
+export interface DialogText {
+  title?: string;
+  message?: string;
+  cancelButton?: string;
+  confirmButton?: string;
+}
+
+//Config of the dialog including text and callback
+export interface DialogConfig extends DialogText {
+  actionCallback?: (confirmed: boolean) => void;
+}
+
+export type RowMenuAction = {
   name: string;
-  onClick: (idx: number) => void;
+  onClick: (idx: number | string) => void;
+  needsConfirmation?: boolean;
+  dialogText?: DialogText;
+};
+
+export type MenuAction = {
+  name: string;
+  onClick: () => void;
+  needsConfirmation?: boolean;
+  dialogText?: DialogText;
 };

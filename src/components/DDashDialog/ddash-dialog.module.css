@@ -1,0 +1,89 @@
+.container {
+  font-family: "PT Sans", sans-serif;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  min-width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.inner {
+  width: 95%;
+  max-width: 400px;
+  padding: 30px 20px 25px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.inner svg {
+  width: 40%;
+  fill: var(--ddash-color-primary);
+}
+
+.inner__text {
+  color: var(--ddash-color-dark-text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.inner__text h1{
+  font-size: var(--ddash-fontSize-30x);
+}
+
+.inner__text p{
+  font-size: var(--ddash-fontSize-15x);
+  text-align: center;
+}
+
+.inner__buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.inner__buttons button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  font-weight: var(--ddash-fontWeight-medium);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.inner__buttons .cancel {
+  background-color: transparent;
+  color: var(--ddash-color-button-primary);
+  border-color: var(--ddash-color-button-primary);
+}
+
+.inner__buttons .cancel:hover {
+  background-color: var(--ddash-color-button-primary);
+  color: var(--ddash-color-button-secondary);
+}
+
+.inner__buttons .confirm {
+  background-color: var(--ddash-color-button-primary);
+  color: var(--ddash-color-button-secondary);
+}
+
+.inner__buttons .confirm:hover {
+  background-color: transparent;
+  color: var(--ddash-color-button-primary);
+  border-color: var(--ddash-color-button-primary);
+}
+
+.inner__buttons button:active {
+  transition: all 0.2s ease;
+  opacity: 0.7;
+  transform: translateY(2px);
+}

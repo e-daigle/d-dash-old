@@ -1,40 +1,13 @@
 import DDashContainer from "@/src/components/DDashContainer";
 import React from "react";
 import DDashSideMenu from "@/src/components/DDashSideMenu";
-import SmallSection from "@/src/components/SmallSection";
-import SmallCard from "@/src/components/SmallCard";
+import DDashSmallSection from "@/src/components/DDashSmallSection";
+import DDashSmallCard from "@/src/components/DDashSmallCard";
 import BurgerBars from "@/src/icons/BurgerBars";
-import LargeSection from "@/src/components/LargeSection";
+import DDashLargeSection from "@/src/components/DDashLargeSection";
 import DDashTable from "@/src/components/DataTable/DDashTable";
-
-const data = [
-  {
-    name: "Emile",
-    last: "Daigle",
-  },
-  {
-    name: "Je",
-    last: "Suis",
-  },
-  {
-    name: "Pomme",
-    last: "Banane",
-  },
-  {
-    name: "Caca",
-    last: "Chat",
-  },
-];
-const columns = [
-  {
-    title: "Name",
-    field: "name",
-  },
-  {
-    title: "Last",
-    field: "last",
-  },
-];
+import people from "../data/people.json";
+import { columns } from "../data/columns";
 
 const links = [
   {
@@ -51,38 +24,36 @@ const links = [
   },
 ];
 
+const defaultConfig = {
+  title: "Are you sure?",
+  message: "This action cannot be undone! Are you sure you want to continue?",
+  cancelButton: "Cancel",
+  confirmButton: "Confirm",
+};
+
 const Home = () => {
-  const handleClick = (idx: number) => {
+  const data = people;
+  console.log(data);
+
+  const handleClick = (idx: number | string) => {
     console.log(idx);
-    console.log(data[idx].name);
+    console.log();
   };
-  const handleClickTop = () => {
-    console.log("ok");
-  };
-  const options = [
-    {
-      name: "Supprimer",
-      onClick: handleClick,
-    },
-    {
-      name: "Supprimer",
-      onClick: handleClick,
-    },
-  ];
 
   return (
     <>
       <DDashContainer
         nav={{ component: <DDashSideMenu links={links} />, position: "left" }}
+        defaultDialogText={defaultConfig}
       >
-        <SmallSection>
-          <SmallCard title={"allo"} value={"2222"} />
-          <SmallCard
+        <DDashSmallSection>
+          <DDashSmallCard title={"allo"} value={"2222"} />
+          <DDashSmallCard
             title={"allo"}
             value={"2222"}
             image={{ component: <BurgerBars />, type: "icon" }}
           />
-          <SmallCard
+          <DDashSmallCard
             title={"allo"}
             value={"2222"}
             image={{ component: <img src="edit-icon.png" />, type: "icon" }}
@@ -91,33 +62,36 @@ const Home = () => {
               { text: "de moins" },
             ]}
           />
-        </SmallSection>
-        <SmallSection>
-          <SmallCard title={"allo"} value={"2222"} />
-          <SmallCard title={"allo"} value={"2222"} />
-        </SmallSection>
-        <LargeSection>
+        </DDashSmallSection>
+        <DDashSmallSection>
+          <DDashSmallCard title={"allo"} value={"2222"} />
+          <DDashSmallCard title={"allo"} value={"2222"} />
+        </DDashSmallSection>
+        <DDashLargeSection>
           <DDashTable
             title="Guides"
-            button={{ name: "Nouveau", onClick: handleClickTop }}
+            tableActions={[{ name: "Nouveau", onClick: () => {} }]}
             data={data}
             columns={columns}
-            rowActions={options}
+            uniqueField={"id"}
           />
-        </LargeSection>
-        <LargeSection>
+        </DDashLargeSection>
+        <DDashLargeSection>
           <DDashTable
             data={data}
             columns={columns}
+            uniqueField={"id"}
             rowActions={[
               {
                 name: "Supprimer",
                 onClick: handleClick,
+                needsConfirmation: true,
               },
             ]}
+            numberPerPage={2}
           />
           <p>allo</p>
-        </LargeSection>
+        </DDashLargeSection>
       </DDashContainer>
     </>
   );

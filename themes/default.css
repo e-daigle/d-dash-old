@@ -7,6 +7,8 @@
   --ddash-color-main-background: #f4f7fe;
   --ddash-color-side-background: #ffffff;
   --ddash-color-card-icon: #422afb;
+  --ddash-color-button-primary: #422afb;
+  --ddash-color-button-secondary: #ffffff;
   --ddash-color-light-text: #8f9bba;
   --ddash-color-dark-text: #2d3748;
   --ddash-border-light: 1px solid rgba(135, 140, 189, 0.2);
@@ -22,6 +24,7 @@
   --ddash-fontSize-15x: 1.25em;
   --ddash-fontSize-20x: 1.5em;
   --ddash-fontSize-25x: 1.75em;
+  --ddash-fontSize-30x: 2em;
   --ddash-letterSpacing-wide: 0.05em;
 }
 
