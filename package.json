@@ -1,6 +1,6 @@
 {
   "name": "@emile-daigle/d-dash",
-  "version": "0.5.0",
+  "version": "1.1.1",
   "description": "Next.js specific dashboard component library",
   "author": "Emile Daigle",
   "license": "ISC",
