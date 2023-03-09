@@ -45,7 +45,7 @@ export interface DialogConfig extends DialogText {
 //Action at the end of a DataTable row
 export type RowMenuAction = {
   name: string;
-  onClick: (idx: number | string) => void;
+  onClick: ((idx: string) => void );
   needsConfirmation?: boolean;
   dialogText?: DialogText;
 };

@@ -35,7 +35,7 @@ const Home = () => {
   const data = people;
   console.log(data);
 
-  const handleClick = (idx: number | string) => {
+  const handleClick = (idx: string) => {
     console.log(idx);
     console.log();
   };
