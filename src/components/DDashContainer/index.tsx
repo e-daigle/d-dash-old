@@ -10,9 +10,7 @@ type Props = {
 };
 
 const DDashContainer = ({ children, nav, defaultDialogText }: Props) => {
-  /*if (children.type !== DDashContainer) {
-    throw new Error("Parent requires a Child component");
-  }*/
+  
   return (
     <div className={styles.container}>
       <ConfirmationDialogProvider defaultDialogText={defaultDialogText}>

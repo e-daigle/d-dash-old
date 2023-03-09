@@ -28,6 +28,7 @@ const DDashRowButton = ({
       );
       if (!confirmed) return;
     }
+    //Call this action's function if no confirmation is needed or user confirmed
     action.onClick(uniqueID);
   };
 

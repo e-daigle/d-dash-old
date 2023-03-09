@@ -17,11 +17,13 @@ export type ImageProps = {
   alt?: string;
 };
 
+//Link for navigation component
 export type NavLink = {
   link: string;
   displayName: string;
 };
 
+//DataTable column
 export type Column = {
   field: string;
   title: string;
@@ -40,6 +42,7 @@ export interface DialogConfig extends DialogText {
   actionCallback?: (confirmed: boolean) => void;
 }
 
+//Action at the end of a DataTable row
 export type RowMenuAction = {
   name: string;
   onClick: (idx: number | string) => void;
@@ -47,6 +50,7 @@ export type RowMenuAction = {
   dialogText?: DialogText;
 };
 
+//Dropdown menu action
 export type MenuAction = {
   name: string;
   onClick: () => void;

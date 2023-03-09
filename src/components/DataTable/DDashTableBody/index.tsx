@@ -12,16 +12,17 @@ type Props = {
 
 const DDashTableBody = ({ data, columns, uniqueField, rowActions }: Props) => {
   const buttons = !(rowActions == undefined || rowActions.length === 0);
+  //Only used if rowActions is defined
   const [openID, setOpenID] = useState<number | string>(-1);
-
   const handleClick = (uniqueID: number | string) => {
-    console.log(openID)
     if (uniqueID == openID) {
       setOpenID(-1);
       return;
     }
     setOpenID(uniqueID);
   };
+
+  //Using a unique field prevents weird behaviors when adding/deleting data
   return (
     <tbody className={styles.container}>
       {data.map((row, idx) => (

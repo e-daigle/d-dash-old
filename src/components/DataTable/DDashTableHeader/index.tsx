@@ -10,7 +10,6 @@ type Props = {
 };
 
 const DDashTableHeader = ({ columns, order, orderBy, sort }: Props) => {
-  const columnWidth = 100 / columns.length;
   return (
     <thead className={styles.container}>
       <tr>
@@ -22,9 +21,9 @@ const DDashTableHeader = ({ columns, order, orderBy, sort }: Props) => {
             {column.title}
             {orderBy === column.field ? (
               order === "descending" ? (
-                <i className="up-caret"> &#9650;</i>
+                <i> &#9650;</i>
               ) : (
-                <i className="down-caret">&#9660;</i>
+                <i>&#9660;</i>
               )
             ) : null}
           </th>

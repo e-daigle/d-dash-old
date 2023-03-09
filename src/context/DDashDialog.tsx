@@ -11,6 +11,7 @@ type Props = {
   defaultDialogText?: DialogText;
 };
 
+//create dialog context
 const ConfirmationDialogContext = createContext<ConfirmationDialogContextProps>(
   {
     openDialog: () => {},
@@ -22,12 +23,10 @@ const ConfirmationDialogProvider = ({ children }: Props) => {
   const [dialogConfig, setDialogConfig] = useState<DialogConfig>({});
 
   const openDialog = (dialogConfig: DialogConfig) => {
-    console.log("openDialog -> setDialogOpen", setDialogOpen);
-    console.log("openDialog -> dialogOpen", dialogOpen);
-    console.log(dialogConfig)
-    if (dialogConfig) {
-      setDialogConfig(dialogConfig);
-    }
+    //Dialog config can only be a callback if user doesn't
+    //provide his text for the dialog
+
+    setDialogConfig(dialogConfig);
     setDialogOpen(true);
   };
 
@@ -65,6 +64,8 @@ const ConfirmationDialogProvider = ({ children }: Props) => {
 const useConfirmationDialog = () => {
   const { openDialog } = useContext(ConfirmationDialogContext);
 
+  //Will show the dialog and return the user's response
+  //Callable function with useConfirmationDialog
   const getConfirmation = (options?: DialogText) =>
     new Promise<boolean>((res) => {
       openDialog({ actionCallback: res, ...options });

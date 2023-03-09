@@ -14,10 +14,15 @@ const DDashDotsMenu = ({ actions, text }: Props) => {
 
   const handleClick = async (action: MenuAction) => {
     setClick(!click);
+    // if action needs confirmation show dialog
+    if (action.needsConfirmation) {
+      const confirmed = await getConfirmation(
+        action.dialogText && action.dialogText
+      );
+      if (!confirmed) return;
+    }
+    //Call this action's function if no confirmation is needed or user confirmed
     action.onClick();
-    const confirmed = await getConfirmation();
-
-    if (confirmed) alert("A Møøse once bit my sister... No realli!");
   };
 
   return (

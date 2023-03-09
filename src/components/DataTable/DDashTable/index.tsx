@@ -25,6 +25,8 @@ const DDashTable = ({
   tableActions,
   numberPerPage,
 }: Props) => {
+  //This component only have pages if a numberPerPage is provided
+  //else it will display the whole data array
   const [order, setOrder] = useState("");
   const [orderBy, setOrderBy] = useState("");
   const [page, setPage] = useState(1);
@@ -34,6 +36,7 @@ const DDashTable = ({
   const [numOfPage, setNumOfPage] = useState(0);
 
   useEffect(() => {
+    //Calculate number of pages
     if (numberPerPage) setNumOfPage(Math.ceil(data.length / numberPerPage));
   }, [numberPerPage]);
 
@@ -45,7 +48,6 @@ const DDashTable = ({
   }, [page]);
 
   const sort = (field: string) => {
-    setOrderBy(field);
     let orderTemp = "descending";
     if (field === orderBy && order === "descending") {
       orderTemp = "ascending";
@@ -61,6 +63,7 @@ const DDashTable = ({
         dataTemp.slice((page - 1) * numberPerPage, page * numberPerPage)
       );
     }
+    setOrderBy(field);
     setOrder(orderTemp);
   };
 
@@ -68,9 +71,6 @@ const DDashTable = ({
     <div className={styles.container}>
       <div className={styles.head}>
         {title ? <h2>{title}</h2> : null}
-        {/*tableActions ? (
-          <button onClick={button.onClick}>{button.name}</button>
-        ) : null*/}
         {tableActions ? <DDashDotsMenu actions={tableActions} /> : null}
       </div>
       <table className={styles.table}>

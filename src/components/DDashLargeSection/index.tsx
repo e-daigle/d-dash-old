@@ -6,6 +6,7 @@ type Props = {
 };
 
 const DDashLargeSection = ({ children }: Props) => {
+  //Either two columns or one
   const isArray = Array.isArray(children);
   if (isArray) {
     return (
