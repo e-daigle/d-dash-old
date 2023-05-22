@@ -5,7 +5,7 @@ import styles from "./ddash-table-body.module.css";
 
 type Props = {
   columns: Column[];
-  data: any[];
+  data: { [key: string]: string | number }[];
   uniqueField: string;
   rowActions?: RowMenuAction[];
 };
@@ -27,9 +27,13 @@ const DDashTableBody = ({ data, columns, uniqueField, rowActions }: Props) => {
     <tbody className={styles.container}>
       {data.map((row, idx) => (
         <tr key={row[uniqueField]}>
-          {columns.map((column, j) => (
-            <td key={j}>{row[column.field]}</td>
-          ))}
+          {columns.map((column, j) =>
+            column.filter ? (
+              <td key={j}>{column.filter(row[column.field].toString())}</td>
+            ) : (
+              <td key={j}>{row[column.field]}</td>
+            )
+          )}
           {buttons ? (
             <DDashRowButton
               uniqueID={row[uniqueField]}

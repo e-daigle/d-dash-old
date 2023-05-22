@@ -4,7 +4,7 @@ import { ConfirmationDialogProvider } from "../../context/DDashDialog";
 import { DialogText } from "../../../types";
 
 type Props = {
-  children: React.ReactElement[];
+  children: React.ReactElement | React.ReactElement[];
   nav?: { component: React.ReactElement; position: "top" | "left" | "right" };
   defaultDialogText?: DialogText;
 };

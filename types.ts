@@ -27,6 +27,7 @@ export type NavLink = {
 export type Column = {
   field: string;
   title: string;
+  filter?: ((input: string) => string);
 };
 
 //Text inside of the Dialog
